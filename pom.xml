@@ -3,11 +3,27 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
 
     <groupId>com.wixpress.automation</groupId>
     <artifactId>wix-webdriver-manager</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
+
+    <name>Wix WebDriver Manager</name>
     <description>Module on creating any web-driver on any supported environment</description>
+    <url>https://wix.com</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/wix/wix-webdriver-manager</url>
+    </scm>
 
     <build>
         <plugins>
@@ -24,18 +40,18 @@
     </build>
 	
 	<organization>
-	        <name>WixAutomation</name>
+	        <name>Wix Automation</name>
 	</organization>
 	
 	<developers>
-	        <developer>
-	            <name>Maxim Kolotilkin</name>
-	            <email>maximk@wix.com</email>
-	            <roles>
-	                <role>owner</role>
-	            </roles>
-	        </developer>
-	    </developers>
+        <developer>
+            <name>Maxim Kolotilkin</name>
+            <email>maximk@wix.com</email>
+            <roles>
+                <role>owner</role>
+            </roles>
+        </developer>
+    </developers>
 
     <dependencies>
         <dependency>
@@ -60,6 +76,18 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.wixpress.automation</groupId>
+            <artifactId>automation-commons-collections</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.wixpress.automation</groupId>
+            <artifactId>automation-commons-functions</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
