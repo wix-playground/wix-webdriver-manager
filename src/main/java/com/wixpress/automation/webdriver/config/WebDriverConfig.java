@@ -28,6 +28,16 @@ public class WebDriverConfig {
             return this;
         }
 
+        public WebDriverConfigBuilder withNumberOfThreads(String numberOfThreads) {
+            this.webDriverConfig.numberOfThreads = numberOfThreads;
+            return this;
+        }
+
+        public WebDriverConfigBuilder withWebDriverRecycleLimit(String webDriverRecycleLimit) {
+            this.webDriverConfig.webDriverRecycleLimit = webDriverRecycleLimit;
+            return this;
+        }
+
         public WebDriverConfigBuilder withSeleniumVersion(String seleniumVersion) {
             this.webDriverConfig.seleniumVersion = seleniumVersion;
             return this;
@@ -177,6 +187,9 @@ public class WebDriverConfig {
     private String runOn;
     private String strategyType;
 
+    private String numberOfThreads;
+    private String webDriverRecycleLimit;
+
     private String seleniumVersion;
     private String platform;
     private String buildName;
@@ -223,6 +236,14 @@ public class WebDriverConfig {
 
     public String getStrategyType() {
         return getValueOrDefault(strategyType, "new_instance");
+    }
+
+    public Integer numberOfThreads() {
+        return Integer.parseInt(getValueOrDefault(numberOfThreads, "10"));
+    }
+
+    public Integer webDriverRecycleLimit() {
+        return Integer.parseInt(getValueOrDefault(webDriverRecycleLimit, "100"));
     }
 
     public String getSeleniumVersion() {
