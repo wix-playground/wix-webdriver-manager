@@ -1,21 +1,20 @@
 package com.wixpress.automation.webdriver.strategy;
 
-import com.wixpress.automation.commons.collections.DefaultObjectPool;
-import com.wixpress.automation.commons.collections.ObjectPool;
-import com.wixpress.automation.commons.collections.exceptions.NoElementAvailableException;
-import com.wixpress.automation.func.ContainerUtils;
-import com.wixpress.automation.func.helpers.ThrowingSupplier;
 import com.wixpress.automation.webdriver.config.WebDriverConfig;
 import com.wixpress.automation.webdriver.exceptions.WebDriverManagerException;
 import com.wixpress.automation.webdriver.factory.WebDriverFactory;
+import com.wixpress.automation.webdriver.utils.collections.DefaultObjectPool;
+import com.wixpress.automation.webdriver.utils.collections.ObjectPool;
+import com.wixpress.automation.webdriver.utils.collections.exceptions.NoElementAvailableException;
+import com.wixpress.automation.webdriver.utils.functions.helpers.ThrowingSupplier;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.*;
 
-import static com.wixpress.automation.func.ContainerUtils.safeGet;
-import static com.wixpress.automation.func.ContainerUtils.safeInvoke;
+import static com.wixpress.automation.webdriver.utils.functions.ContainerUtils.safeGet;
+import static com.wixpress.automation.webdriver.utils.functions.ContainerUtils.safeInvoke;
 
 public class RecycledWebDriverStrategy implements WebDriverStrategy {
 
@@ -92,7 +91,7 @@ public class RecycledWebDriverStrategy implements WebDriverStrategy {
     private static <T> Optional<T> executeWithTimeout(ThrowingSupplier<T> action, int timeoutMs) {
         ExecutorService executor = Executors.newSingleThreadExecutor();
         Future future = executor.submit(() -> {
-            return ContainerUtils.safeGet(new ThrowingSupplier[]{action});
+            return safeGet(new ThrowingSupplier[]{action});
         });
 
         try {
