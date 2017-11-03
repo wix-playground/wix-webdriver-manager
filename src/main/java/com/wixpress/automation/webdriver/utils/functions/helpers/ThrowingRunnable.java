@@ -1,7 +1,7 @@
 package com.wixpress.automation.webdriver.utils.functions.helpers;
 
 
-import static com.wixpress.automation.func.ContainerUtils.safeInvoke;
+import static com.wixpress.automation.webdriver.utils.functions.ContainerUtils.safeInvoke;
 
 public interface ThrowingRunnable {
 
