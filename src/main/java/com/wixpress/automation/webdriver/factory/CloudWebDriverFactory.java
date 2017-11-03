@@ -9,6 +9,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -49,7 +50,9 @@ public class CloudWebDriverFactory implements WebDriverFactory {
                 capabilities.setCapability(CapabilityType.VERSION, FIREFOX_VERSION);
                 break;
             case EDGE:
-                capabilities.merge(BrowserCapabilities.getEdgeOptions());
+                capabilities.setCapability(CapabilityType.BROWSER_NAME, BrowserType.EDGE);
+                capabilities.setCapability(CapabilityType.PLATFORM, Platform.WINDOWS);
+                capabilities.setCapability(CapabilityType.VERSION, EDGE_VERSION);
                 capabilities.setCapability("platform", "Windows 10");
                 capabilities.setCapability("version", EDGE_VERSION);
                 break;
