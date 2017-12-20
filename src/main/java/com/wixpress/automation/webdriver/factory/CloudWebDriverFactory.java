@@ -1,6 +1,5 @@
 package com.wixpress.automation.webdriver.factory;
 
-import com.wixpress.automation.webdriver.capabilities.BrowserCapabilities;
 import com.wixpress.automation.webdriver.capabilities.PlatformCapabilities;
 import com.wixpress.automation.webdriver.config.WebDriverConfig;
 import com.wixpress.automation.webdriver.enums.CloudService;
@@ -64,7 +63,7 @@ public class CloudWebDriverFactory implements WebDriverFactory {
             case SAFARI:
                 capabilities.setCapability(CapabilityType.BROWSER_NAME, "safari");
                 capabilities.setCapability(CapabilityType.VERSION, SAFARI_VERSION);
-                capabilities.setCapability(CapabilityType.PLATFORM, Platform.SIERRA);
+                capabilities.setCapability("platform", Platform.SIERRA);
                 capabilities.setCapability("seleniumVersion", SELENIUM_VERSION);
                 break;
             case IOS:
