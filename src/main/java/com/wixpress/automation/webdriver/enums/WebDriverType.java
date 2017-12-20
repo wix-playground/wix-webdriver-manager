@@ -9,6 +9,12 @@ public enum WebDriverType {
     IOS,
     ANDROID;
 
+    /**
+     * Returns web driver type according to given value
+     *
+     * @param webDriverType raw value
+     * @return web driver strategy type
+     */
     public static WebDriverType fromString(String webDriverType) {
         try {
             return valueOf(webDriverType.toUpperCase());
