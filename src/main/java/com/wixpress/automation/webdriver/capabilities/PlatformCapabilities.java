@@ -19,7 +19,7 @@ public class PlatformCapabilities {
 
     public static DesiredCapabilities defaultCapabilities() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(CapabilityType.PLATFORM, PLATFORM);
+        capabilities.setCapability("platform", PLATFORM);
         capabilities.setCapability("seleniumVersion", SELENIUM_VERSION);
         capabilities.setCapability("screenResolution", SCREEN_RESOLUTION);
         capabilities.setCapability("record-screenshots", true);
