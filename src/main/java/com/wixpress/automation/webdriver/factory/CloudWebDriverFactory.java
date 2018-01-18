@@ -50,7 +50,7 @@ public class CloudWebDriverFactory implements WebDriverFactory {
                 break;
             case EDGE:
                 capabilities.setCapability(CapabilityType.BROWSER_NAME, BrowserType.EDGE);
-                capabilities.setCapability(CapabilityType.PLATFORM, Platform.WINDOWS);
+                capabilities.setCapability("platform", Platform.WINDOWS);
                 capabilities.setCapability(CapabilityType.VERSION, EDGE_VERSION);
                 capabilities.setCapability("platform", "Windows 10");
                 capabilities.setCapability("version", EDGE_VERSION);
