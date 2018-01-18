@@ -22,6 +22,11 @@ public class WebDriverManager {
         webDriverStrategy = createStrategy();
     }
 
+    public WebDriverManager(WebDriverConfig webDriverConfig) {
+        WebDriverConfig.fillConfig(webDriverConfig);
+        webDriverStrategy = createStrategy();
+    }
+
     public WebDriver getAvailableWebDriver() {
         return webDriverStrategy.get();
     }
