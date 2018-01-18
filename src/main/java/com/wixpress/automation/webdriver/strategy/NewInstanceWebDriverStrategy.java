@@ -19,7 +19,6 @@ public class NewInstanceWebDriverStrategy implements WebDriverStrategy {
     @Override
     public void release(WebDriver webDriver) {
         if (webDriver != null) {
-            webDriver.close();
             webDriver.quit();
         }
     }
