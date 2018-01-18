@@ -2,12 +2,18 @@ package com.wixpress.automation.webdriver.config;
 
 public class WebDriverConfig {
 
-    private static final class SingletonHolder {
-        private static final WebDriverConfig INSTANCE = new WebDriverConfig();
-    }
+    private static WebDriverConfig INSTANCE;
 
     public static WebDriverConfig getInstance() {
-        return SingletonHolder.INSTANCE;
+
+        if (INSTANCE == null)
+            INSTANCE = new WebDriverConfig();
+
+        return INSTANCE;
+    }
+
+    public static void fillConfig(WebDriverConfig config) {
+        INSTANCE = config;
     }
 
     public static class WebDriverConfigBuilder {
