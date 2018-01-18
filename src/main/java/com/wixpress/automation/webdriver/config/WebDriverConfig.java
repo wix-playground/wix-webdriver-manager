@@ -327,7 +327,7 @@ public class WebDriverConfig {
     }
 
     public Boolean isHeadlessMode() {
-        return getValueOrDefault(headlessMode, true);
+        return getValueOrDefault(headlessMode, false);
     }
 
     public Boolean isMobileUserAgent() {
