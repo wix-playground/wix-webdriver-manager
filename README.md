@@ -39,7 +39,7 @@ Simple and powerful tool to manage (launching, closing) browsers for testing.
     // .....
     
     // Quit webDriver
-    wdm..releaseWebDriver(webDriver);
+    wdm.releaseWebDriver(webDriver);
 ```
 
 2. Custom Configuration
@@ -66,7 +66,7 @@ Simple and powerful tool to manage (launching, closing) browsers for testing.
     // .....
     
     // Quit webDriver
-    wdm..releaseWebDriver(webDriver);
+    wdm.releaseWebDriver(webDriver);
 ```
 
 3. Mobile Configuration
