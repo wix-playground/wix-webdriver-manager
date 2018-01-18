@@ -51,7 +51,7 @@ public class WebDriverManager {
     }
 
     private WebDriverStrategyType strategyType() {
-        return WebDriverStrategyType.valueOf(WebDriverConfig.getInstance().getStrategyType());
+        return WebDriverStrategyType.fromString(WebDriverConfig.getInstance().getStrategyType());
     }
 
     private WebDriverFactory createFactory() {
