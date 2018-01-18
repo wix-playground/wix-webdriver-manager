@@ -1,16 +1,18 @@
-
+---
 # Wix Webdriver Manager
 
 Simple and powerful tool to manage (launching, closing) browsers for testing. 
 
+---
 ## Features
 
 * Run all main browsers   
-* Run browsers locally, remotely or in cloud services   
+* Run browsers locally, remotely or in cloud services (SauceLabs, BrowserStack)
 * Re-use the same browser for all tests without re-starting it (Recycled WebDriver Strategy)   
 * Run mobile browsers on iOS / Android (Appium Support)   
 * Configure WebDriver as much as possible for your projects and needs
 
+---
 ## Installation
 
 ```xml
@@ -21,7 +23,7 @@ Simple and powerful tool to manage (launching, closing) browsers for testing.
 </dependency>
 
 ```
-
+---
 ## Usage
 
 1. Quick Start
@@ -52,7 +54,7 @@ Simple and powerful tool to manage (launching, closing) browsers for testing.
                                 .withwithScreenResolution("1280x1024")
                                 .withCloudService("sauce_labs")
                                 .withCloudUserName(SL_USER_NAME)
-                                .withCloudUserPAss(SL_USER_KEY)
+                                .withCloudUserPass(SL_USER_KEY)
                                 .build();
 
     // Create an instance of WebDriverManager
@@ -65,6 +67,31 @@ Simple and powerful tool to manage (launching, closing) browsers for testing.
     
     // Quit webDriver
     wdm..releaseWebDriver(webDriver);
+```
+
+3. Mobile Configuration
+
+```java
+
+    // Create instance of config and fill it with required parameters
+    WebDriverConfig config = new WebDrvierConfig.WebdriverConfigBuilder()
+                                .withWebDriverType("iOS")
+                                .withIOSPlatformVersion("11.2")
+                                .withIOSDeviceName("iPhone 8")
+                                .withMobileApplicationPath("/Users/username/Projects/MyApp/mycoolapplication.app")
+                                .build();
+
+    // Create an instance of WebDriverManager
+    WebDriverManager wdm = new WebDriverManager(config);
+    
+    // Create new webDriver instance
+    IOSDrvier driver = wdm.getAvailableWebDriver();
+    
+    // .....
+    
+    // Quit webDriver
+    wdm..releaseWebDriver(webDriver);
+
 ```
 
 
@@ -116,5 +143,17 @@ Configuration of the manager can be done using WebDriverConfigBuilder.
 * **androidPlatformVersion** - specify Android Platform Version
 * **mobileApplicationPath** - specify absolute path to application binary. Will be used by Appium to install app on the device  
 
+---
+## Contributing
+There are many ways you can contribute to our efforts. We are happy to accept pull requests and issues, and hope to have a fruitful discussion.
+ We ask all participants to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html). Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting our Product Manager [Roi Ashkenazi](mailto:roia@wix.com).
 
+### Help us create better docs
+It's a cliché that open-source projects have terrible documentation. We don't want to be one of those! So please tell us about our docs: are they too verbose? Or too terse? What needed more explanation or more examples? Were they organized sensibly?
+ 
+### Tell us what's missing
+What should WebDriver-Manager be able to do, but currently doesn't?
 
+---
+## License
+Copyright (c) 2017 Wix.com Ltd. All Rights Reserved. Use of this source code is governed by the MIT [License](LICENSE.md) 
