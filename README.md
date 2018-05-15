@@ -1,7 +1,7 @@
 ---
 # Wix Webdriver Manager
 
-Simple and powerful tool to manage (launching, closing) browsers for testing. 
+A simple yet powerful toolkit for managing Selenium automated browsers. 
 
 ---
 ## Features
@@ -119,8 +119,8 @@ Configuration of the manager can be done using WebDriverConfigBuilder.
 * **buildName** - specify build name in cloud service
 * **buildNumber** - specify build number in cloud service
 * **shouldUseBinariesManagerLocally** - set to true if you want 
-* **cloudService** - specify which cloud service to use for remote run.  
-    Supported services: SauceLabs, BrowserStack
+* **cloudService** - specify which cloud service to use for remote run  
+                     Supported services: SauceLabs, BrowserStack
 * **cloudUserName** - specify cloud service username
 * **cloudUserPassword** - specify cloud service key 
 * **screenResolution** - specify screen resolution for cloud service
@@ -139,14 +139,14 @@ Configuration of the manager can be done using WebDriverConfigBuilder.
 * **appiumVersion**  - specify Appium version to use on cloud service
 * **iOSDeviceName** - specify iOS Simulator Device Name. Mac users only. Specified simulator should be downloaded in Xcode  
 * **iOSPlatformVersion** - specify iOS Platform Version. Mac users only. Specified platform should be downloaded in Xcode
-* **androidDeviceName** - specify Android device name.   
+* **androidDeviceName** - specify Android device name   
 * **androidPlatformVersion** - specify Android Platform Version
 * **mobileApplicationPath** - specify absolute path to application binary. Will be used by Appium to install app on the device  
 
 ---
 ## Contributing
 There are many ways you can contribute to our efforts. We are happy to accept pull requests and issues, and hope to have a fruitful discussion.
- We ask all participants to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html). Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting our Product Manager [Roi Ashkenazi](mailto:roia@wix.com).
+We ask all participants to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html). Instances of abusive, harassing, or otherwise unacceptable behavior may be reported as new issue or via [email](mailto:automation@wix.com).
 
 ### Help us create better docs
 It's a cliché that open-source projects have terrible documentation. We don't want to be one of those! So please tell us about our docs: are they too verbose? Or too terse? What needed more explanation or more examples? Were they organized sensibly?
