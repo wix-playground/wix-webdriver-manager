@@ -38,20 +38,6 @@
             </plugin>
         </plugins>
     </build>
-	
-	<organization>
-	        <name>Wix Automation</name>
-	</organization>
-	
-	<developers>
-        <developer>
-            <name>Maxim Kolotilkin</name>
-            <email>maximk@wix.com</email>
-            <roles>
-                <role>owner</role>
-            </roles>
-        </developer>
-    </developers>
 
     <dependencies>
         <dependency>
