@@ -12,7 +12,7 @@ public class WebDriverConfig {
         return INSTANCE;
     }
 
-    public static void fillConfig(WebDriverConfig config) {
+    public static void apply(WebDriverConfig config) {
         INSTANCE = config;
     }
 
@@ -20,167 +20,167 @@ public class WebDriverConfig {
         private final WebDriverConfig webDriverConfig = new WebDriverConfig();
 
         public WebDriverConfigBuilder withWebDriverType(String webDriverType) {
-            this.webDriverConfig.webDriverType = webDriverType;
+            webDriverConfig.webDriverType = webDriverType;
             return this;
         }
 
         public WebDriverConfigBuilder withRunOn(String runOn) {
-            this.webDriverConfig.runOn = runOn;
+            webDriverConfig.runOn = runOn;
             return this;
         }
 
         public WebDriverConfigBuilder withStrategyType(String strategyType) {
-            this.webDriverConfig.strategyType = strategyType;
+            webDriverConfig.strategyType = strategyType;
             return this;
         }
 
         public WebDriverConfigBuilder withNumberOfThreads(String numberOfThreads) {
-            this.webDriverConfig.numberOfThreads = numberOfThreads;
+            webDriverConfig.numberOfThreads = numberOfThreads;
             return this;
         }
 
         public WebDriverConfigBuilder withWebDriverRecycleLimit(String webDriverRecycleLimit) {
-            this.webDriverConfig.webDriverRecycleLimit = webDriverRecycleLimit;
+            webDriverConfig.webDriverRecycleLimit = webDriverRecycleLimit;
             return this;
         }
 
         public WebDriverConfigBuilder withSeleniumVersion(String seleniumVersion) {
-            this.webDriverConfig.seleniumVersion = seleniumVersion;
+            webDriverConfig.seleniumVersion = seleniumVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withPlatform(String platform) {
-            this.webDriverConfig.platform = platform;
+            webDriverConfig.platform = platform;
             return this;
         }
 
         public WebDriverConfigBuilder withBuildName(String buildName) {
-            this.webDriverConfig.buildName = buildName;
+            webDriverConfig.buildName = buildName;
             return this;
         }
 
         public WebDriverConfigBuilder withBuildNumber(String buildNumber) {
-            this.webDriverConfig.buildNumber = buildNumber;
+            webDriverConfig.buildNumber = buildNumber;
             return this;
         }
 
         public WebDriverConfigBuilder withBuildNumber(Boolean shouldUseBinariesManagerLocally) {
-            this.webDriverConfig.shouldUseBinariesManagerLocally = shouldUseBinariesManagerLocally;
+            webDriverConfig.shouldUseBinariesManagerLocally = shouldUseBinariesManagerLocally;
             return this;
         }
 
         public WebDriverConfigBuilder withChromeVersion(String chromeVersion) {
-            this.webDriverConfig.chromeVersion = chromeVersion;
+            webDriverConfig.chromeVersion = chromeVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withChromeDriverVersion(String chromeDriverVersion) {
-            this.webDriverConfig.chromeDriverVersion = chromeDriverVersion;
+            webDriverConfig.chromeDriverVersion = chromeDriverVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withFirefoxVersion(String firefoxVersion) {
-            this.webDriverConfig.firefoxVersion = firefoxVersion;
+            webDriverConfig.firefoxVersion = firefoxVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withFirefoxDriverVersion(String firefoxDriverVersion) {
-            this.webDriverConfig.firefoxDriverVersion = firefoxDriverVersion;
+            webDriverConfig.firefoxDriverVersion = firefoxDriverVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withSafariVersion(String safariVersion) {
-            this.webDriverConfig.safariVersion = safariVersion;
+            webDriverConfig.safariVersion = safariVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withIEVersion(String ieVersion) {
-            this.webDriverConfig.ieVersion = ieVersion;
+            webDriverConfig.ieVersion = ieVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withIEDriverVersion(String ieDriverVersion) {
-            this.webDriverConfig.ieDriverVersion = ieDriverVersion;
+            webDriverConfig.ieDriverVersion = ieDriverVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withEdgeVersion(String edgeVersion) {
-            this.webDriverConfig.edgeVersion = edgeVersion;
+            webDriverConfig.edgeVersion = edgeVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withEdgeWebDriverPath(String edgeWebDriverPath) {
-            this.webDriverConfig.edgeWebDriverPath = edgeWebDriverPath;
+            webDriverConfig.edgeWebDriverPath = edgeWebDriverPath;
             return this;
         }
 
         public WebDriverConfigBuilder withAppiumVersion(String appiumVersion) {
-            this.webDriverConfig.appiumVersion = appiumVersion;
+            webDriverConfig.appiumVersion = appiumVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withIOSPlatformVersion(String iosPlatformVersion) {
-            this.webDriverConfig.iOSPlatformVersion = iosPlatformVersion;
+            webDriverConfig.iOSPlatformVersion = iosPlatformVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withIOSDeviceName(String iosDeviceName) {
-            this.webDriverConfig.iOSDeviceName = iosDeviceName;
+            webDriverConfig.iOSDeviceName = iosDeviceName;
             return this;
         }
 
         public WebDriverConfigBuilder withAndroidPlatformVersion(String androidPlatformVersion) {
-            this.webDriverConfig.androidPlatformVersion = androidPlatformVersion;
+            webDriverConfig.androidPlatformVersion = androidPlatformVersion;
             return this;
         }
 
         public WebDriverConfigBuilder withAndroidDeviceName(String androidDeviceName) {
-            this.webDriverConfig.androidDeviceName = androidDeviceName;
+            webDriverConfig.androidDeviceName = androidDeviceName;
             return this;
         }
 
         public WebDriverConfigBuilder withMobileApplicationPath(String mobileApplicationPath) {
-            this.webDriverConfig.mobileApplicationPath = mobileApplicationPath;
+            webDriverConfig.mobileApplicationPath = mobileApplicationPath;
             return this;
         }
 
         public WebDriverConfigBuilder withLanguageCode(String languageCode) {
-            this.webDriverConfig.languageCode = languageCode;
+            webDriverConfig.languageCode = languageCode;
             return this;
         }
 
         public WebDriverConfigBuilder withScreenResolution(String screenResolution) {
-            this.webDriverConfig.screenResolution = screenResolution;
+            webDriverConfig.screenResolution = screenResolution;
             return this;
         }
 
         public WebDriverConfigBuilder withHeadlessMode(Boolean headlessMode ) {
-            this.webDriverConfig.headlessMode = headlessMode;
+            webDriverConfig.headlessMode = headlessMode;
             return this;
         }
 
         public WebDriverConfigBuilder withMobileUserAgent(Boolean mobileUserAgent) {
-            this.webDriverConfig.mobileUserAgent = mobileUserAgent;
+            webDriverConfig.mobileUserAgent = mobileUserAgent;
             return this;
         }
 
         public WebDriverConfigBuilder withEnabledWebDriverLogging(Boolean enabledWebDriverLogging) {
-            this.webDriverConfig.enableWebDriverLogging = enabledWebDriverLogging;
+            webDriverConfig.enableWebDriverLogging = enabledWebDriverLogging;
             return this;
         }
 
         public WebDriverConfigBuilder withCloudService(String cloudService) {
-            this.webDriverConfig.cloudService = cloudService;
+            webDriverConfig.cloudService = cloudService;
             return this;
         }
 
         public WebDriverConfigBuilder withCloudUserName(String cloudUserName) {
-            this.webDriverConfig.cloudUserName = cloudUserName;
+            webDriverConfig.cloudUserName = cloudUserName;
             return this;
         }
 
         public WebDriverConfigBuilder withCloudUserPass(String cloudUserPass) {
-            this.webDriverConfig.cloudUserPassword = cloudUserPass;
+            webDriverConfig.cloudUserPassword = cloudUserPass;
             return this;
         }
 

@@ -23,7 +23,7 @@ public class WebDriverManager {
     }
 
     public WebDriverManager(WebDriverConfig webDriverConfig) {
-        WebDriverConfig.fillConfig(webDriverConfig);
+        WebDriverConfig.apply(webDriverConfig);
         webDriverStrategy = createStrategy();
     }
 
