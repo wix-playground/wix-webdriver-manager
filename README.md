@@ -90,7 +90,7 @@ A simple yet powerful toolkit for managing Selenium automated browsers.
     // .....
     
     // Quit webDriver
-    wdm..releaseWebDriver(webDriver);
+    wdm.releaseWebDriver(webDriver);
 
 ```
 
