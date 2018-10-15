@@ -83,7 +83,7 @@ public class BrowserCapabilities {
 
     public static SafariOptions getSafariOptions() {
         SafariOptions options = new SafariOptions();
-        options.useCleanSession(true);
+        options.setCapability("cleanSession", true);
         return options;
     }
 }

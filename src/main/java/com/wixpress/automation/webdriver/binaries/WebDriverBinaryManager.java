@@ -20,17 +20,17 @@ public final class WebDriverBinaryManager {
         try {
             switch (webDriverType) {
                 case CHROME:
-                    ChromeDriverManager.getInstance()
+                    ChromeDriverManager.chromedriver()
                             .version(binariesVersion.chromeDriverBinaryVersion())
                             .setup();
                     break;
                 case FIREFOX:
-                    FirefoxDriverManager.getInstance()
+                    FirefoxDriverManager.firefoxdriver()
                             .version(binariesVersion.firefoxDriverBinaryVersion())
                             .setup();
                     break;
                 case EXPLORER:
-                    InternetExplorerDriverManager.getInstance()
+                    InternetExplorerDriverManager.iedriver()
                             .version(binariesVersion.internetExplorerBinaryVersion())
                             .setup();
                     break;
